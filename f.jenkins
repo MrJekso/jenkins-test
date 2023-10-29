@@ -2,19 +2,19 @@
 
 properties([disableConcurrentBuilds()])
 
-pipeline {
-    agent {
-        label 'master'
-    }
-    options {
-        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
-        timestamps()
-    }
-    stages {
-        stage("Preparations") {
-            steps {
-                sh "ssh root@trp '\'hostname\''
-            }
-        }
-    }
-}
+#pipeline {
+#    agent {
+#        label 'master'
+#    }
+#    options {
+#        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+#        timestamps()
+#    }
+#    stages {
+#        stage("Preparations") {
+#            steps {
+#                sh "ssh root@trp '\'hostname\''
+#            }
+#        }
+#    }
+#}
